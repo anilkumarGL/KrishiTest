@@ -21,7 +21,7 @@ public class Utils {
     public static final String BASE_URL= "http://www.entekrishi.com/mobile";
     public static final String LOGIN_URL = "/login/";
     public static final String CHECK_SESSION_URL = "/check/";
-    public static final String NOTIFICATION_LIST_URL = "/notification/";
+    public static final String NOTIFICATION_LIST_URL = "/notification";
     /// for the constatnat check
     public static final String LOGIN_SUCCESS = "Login Success";
     public static final String PULL_NOTIFY_SUCCESS = "Success";
