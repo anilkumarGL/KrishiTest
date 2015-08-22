@@ -1,11 +1,9 @@
-package entekrishi.com.krishitest;
+package entekrishi.com.EnteKrishi;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.webkit.WebView;
 import android.widget.ProgressBar;
-
-import entekrishi.com.krishitest.common.Utils;
 
 /**
  * Created by gorillalogic on 8/13/15.

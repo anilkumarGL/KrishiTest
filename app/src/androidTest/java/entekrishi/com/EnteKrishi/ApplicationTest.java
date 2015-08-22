@@ -1,4 +1,4 @@
-package entekrishi.com.krishitest;
+package entekrishi.com.EnteKrishi;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

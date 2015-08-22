@@ -1,4 +1,4 @@
-package entekrishi.com.krishitest.Rest;
+package entekrishi.com.EnteKrishi.Rest;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
@@ -6,16 +6,10 @@ import android.os.AsyncTask;
 import com.google.gson.GsonBuilder;
 
 
-import org.json.JSONObject;
-
 import java.io.IOException;
 import java.io.Reader;
-import java.util.ArrayList;
 
-import entekrishi.com.krishitest.common.Utils;
-import entekrishi.com.krishitest.model.ModelClassMapper;
-import entekrishi.com.krishitest.model.NotificationRsp;
-import entekrishi.com.krishitest.model.Product;
+import entekrishi.com.EnteKrishi.model.ModelClassMapper;
 
 /**
  * Created by Santhosh.Joseph on 07-08-2015.

@@ -1,4 +1,4 @@
-package entekrishi.com.krishitest.common;
+package entekrishi.com.EnteKrishi.common;
 
 import android.content.Context;
 import android.net.ConnectivityManager;

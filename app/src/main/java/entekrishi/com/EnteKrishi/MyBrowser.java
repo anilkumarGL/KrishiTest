@@ -1,4 +1,4 @@
-package entekrishi.com.krishitest;
+package entekrishi.com.EnteKrishi;
 
 import android.graphics.Bitmap;
 import android.view.View;

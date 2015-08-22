@@ -1,26 +1,18 @@
-package entekrishi.com.krishitest;
+package entekrishi.com.EnteKrishi;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
 import android.view.View;
 import android.provider.Settings.Secure;
 
-import java.text.NumberFormat;
-import java.util.Locale;
-
-import entekrishi.com.krishitest.model.Data;
-import entekrishi.com.krishitest.model.ModelClassMapper;
-import entekrishi.com.krishitest.model.LoginRsp;
-import entekrishi.com.krishitest.Rest.*;
-import entekrishi.com.krishitest.common.*;
+import entekrishi.com.EnteKrishi.model.Data;
+import entekrishi.com.EnteKrishi.model.ModelClassMapper;
+import entekrishi.com.EnteKrishi.model.LoginRsp;
+import entekrishi.com.EnteKrishi.Rest.*;
+import entekrishi.com.EnteKrishi.common.*;
 
 public class MainActivity extends ActionBarActivity implements View.OnClickListener, OnPostExecuteListener {
     private Button btnLogin;
@@ -36,10 +28,13 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
         btnLogin = (Button) findViewById(R.id.button_login) ;
         txtUserName = (EditText) findViewById(R.id.username) ;
-        txtUserName.setText("kirankrishnan@axtecindia.com");
+        //txtUserName.setText("kirankrishnan@axtecindia.com");
         txtPwd = (EditText) findViewById(R.id.password) ;
-        txtPwd.setText("kiran123");
+        //txtPwd.setText("kiran123");
         findViewById(R.id.button_login).setOnClickListener(this);
+        findViewById(R.id.button_signup).setOnClickListener(this);
+        findViewById(R.id.button_forgotpwd).setOnClickListener(this);
+
         //getting unique id for device
         deviceid = Secure.getString(getContentResolver(), Secure.ANDROID_ID);
 
@@ -50,6 +45,26 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
             case R.id.button_login:
                 login();
                 break;
+            case R.id.button_signup:
+                signup();
+                break;
+            case R.id.button_forgotpwd:
+                forgot();
+                break;
+        }
+    }
+    private void forgot() {
+        if (NetworkListener.isNetworkConnected(getApplicationContext())) {
+            startActivity(new Intent(MainActivity.this, Signup.class).putExtra("url", Utils.FORGOT_URL));
+        } else {
+            Utils.showInfoDialog(this, Utils.MSG_TITLE, Utils.MSG_NO_INTERNET, null);
+        }
+    }
+    private void signup() {
+        if (NetworkListener.isNetworkConnected(getApplicationContext())) {
+            startActivity(new Intent(MainActivity.this, Signup.class).putExtra("url", Utils.SIGN_UP_URL));
+        } else {
+            Utils.showInfoDialog(this, Utils.MSG_TITLE, Utils.MSG_NO_INTERNET, null);
         }
     }
 

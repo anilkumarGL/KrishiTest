@@ -1,15 +1,9 @@
-package entekrishi.com.krishitest.common;
+package entekrishi.com.EnteKrishi.common;
 
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
-import android.util.Log;
 
-import java.io.IOException;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -29,12 +23,16 @@ public class Utils {
     //message titles
     public static final String MSG_TITLE = "EnteKrishi";
     public static final String MSG_NO_INTERNET = "You are not connected to Internet. Please try later.";
+    public static final String MSG_NO_NOTIFICATIONS = "You have no notifications.";
+    public static final String MSG_LOGIN_AGAIN = " Please login again.";
     ///WebView
 
     public static final String HOME_URL = "http://www.entekrishi.com/";
     public static final String SEARCH_URL = "http://www.entekrishi.com/advanced/";
     public static final String ALL_PRODUCTS__URL = "http://www.entekrishi.com/listing/";
 
+    public static final String SIGN_UP_URL = "http://www.entekrishi.com/signup/";
+    public static final String FORGOT_URL = "http://www.entekrishi.com/password/";
     // for list view
 
     public static final String KEY_TITLE = "title";

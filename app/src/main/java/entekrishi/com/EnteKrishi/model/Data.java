@@ -1,13 +1,4 @@
-package entekrishi.com.krishitest.model;
-
-import android.content.Context;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
-import android.util.Log;
-
-import java.io.IOException;
-import java.net.HttpURLConnection;
-import java.net.URL;
+package entekrishi.com.EnteKrishi.model;
 
 /**
  * Created by Santhosh.Joseph on 07-08-2015.

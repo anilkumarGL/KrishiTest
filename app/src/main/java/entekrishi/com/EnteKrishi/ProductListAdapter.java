@@ -1,4 +1,4 @@
-package entekrishi.com.krishitest;
+package entekrishi.com.EnteKrishi;
 
 import java.util.ArrayList;
 
@@ -10,8 +10,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import entekrishi.com.krishitest.common.Utils;
-import entekrishi.com.krishitest.model.Product;
+import entekrishi.com.EnteKrishi.common.Utils;
+import entekrishi.com.EnteKrishi.model.Product;
 
 
 /**

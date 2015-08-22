@@ -1,4 +1,4 @@
-package entekrishi.com.krishitest.model;
+package entekrishi.com.EnteKrishi.model;
 
 /**
  * Created by Santhosh.Joseph on 07-08-2015.

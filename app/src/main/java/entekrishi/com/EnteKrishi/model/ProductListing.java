@@ -1,4 +1,4 @@
-package entekrishi.com.krishitest.model;
+package entekrishi.com.EnteKrishi.model;
 
 import java.util.ArrayList;
 import java.util.List;

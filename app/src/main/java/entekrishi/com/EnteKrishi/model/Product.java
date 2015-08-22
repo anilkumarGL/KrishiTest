@@ -1,6 +1,4 @@
-package entekrishi.com.krishitest.model;
-
-import java.util.Date;
+package entekrishi.com.EnteKrishi.model;
 
 /**
  * Created by Santhosh.Joseph on 08-08-2015.

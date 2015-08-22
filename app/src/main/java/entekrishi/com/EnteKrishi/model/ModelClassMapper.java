@@ -1,7 +1,7 @@
-package entekrishi.com.krishitest.model;
+package entekrishi.com.EnteKrishi.model;
 
 import java.util.HashMap;
-import entekrishi.com.krishitest.common.Utils;
+import entekrishi.com.EnteKrishi.common.Utils;
 
 /**
  * Created by Santhosh.Joseph on 07-08-2015.

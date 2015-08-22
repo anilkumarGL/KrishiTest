@@ -1,8 +1,7 @@
-package entekrishi.com.krishitest;
+package entekrishi.com.EnteKrishi;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -14,14 +13,14 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import entekrishi.com.krishitest.Rest.OnPostExecuteListener;
-import entekrishi.com.krishitest.Rest.RestApi;
-import entekrishi.com.krishitest.common.NetworkListener;
-import entekrishi.com.krishitest.common.Utils;
-import entekrishi.com.krishitest.model.Data;
-import entekrishi.com.krishitest.model.ModelClassMapper;
-import entekrishi.com.krishitest.model.NotificationRsp;
-import entekrishi.com.krishitest.model.Product;
+import entekrishi.com.EnteKrishi.Rest.OnPostExecuteListener;
+import entekrishi.com.EnteKrishi.Rest.RestApi;
+import entekrishi.com.EnteKrishi.common.NetworkListener;
+import entekrishi.com.EnteKrishi.common.Utils;
+import entekrishi.com.EnteKrishi.model.Data;
+import entekrishi.com.EnteKrishi.model.ModelClassMapper;
+import entekrishi.com.EnteKrishi.model.NotificationRsp;
+import entekrishi.com.EnteKrishi.model.Product;
 
 
 public class HomeTab extends Activity implements View.OnClickListener,OnPostExecuteListener, AdapterView.OnItemClickListener {
@@ -115,13 +114,17 @@ public class HomeTab extends Activity implements View.OnClickListener,OnPostExec
         NotificationRsp response = (NotificationRsp)model;
         if (response.msg.toString().equalsIgnoreCase(Utils.PULL_NOTIFY_SUCCESS)) {
             ArrayList<Product> productlist = response.listofProducts;
+            if (Integer.parseInt(response.unread)==0) {
+                Utils.showInfoDialog(this, Utils.MSG_TITLE, Utils.MSG_NO_NOTIFICATIONS, null);
+            }
+
             if (isNotifyTab) {
                 adapter = new ProductListAdapter(this, productlist);
                 prodList.setAdapter(adapter);
             }
             updateCount(response.unread);
         } else {
-            Utils.showInfoDialog(this, Utils.MSG_TITLE, response.msg, null);
+            Utils.showInfoDialog(this, Utils.MSG_TITLE, response.msg + Utils.MSG_LOGIN_AGAIN, null);
         }
     }
 
