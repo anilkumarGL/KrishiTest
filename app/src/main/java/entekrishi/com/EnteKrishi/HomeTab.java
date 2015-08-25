@@ -49,6 +49,7 @@ public class HomeTab extends Activity implements View.OnClickListener,OnPostExec
         wv.loadUrl(Utils.HOME_URL);
 
         prodList = (ListView) findViewById(R.id.plistView);
+        prodList.setEmptyView(findViewById(android.R.id.empty));
         btn_search = (TextView) findViewById(R.id.btnSearch);
         btn_notifications = (TextView) findViewById(R.id.btnNotify);
         btn_all_products = (TextView) findViewById(R.id.btnAllproducts);
